@@ -8,19 +8,20 @@ tuoi_bac = 2025 - nam_sinh_bac
 tuoi_trung = 2025 - nam_sinh_trung
 tuoi_nam = 2025 - nam_sinh_nam
 
-# Sắp xếp theo thứ tự từ lớn đến nhỏ
+# Sắp xếp theo thứ tự tuổi giảm dần
 if tuoi_bac >= tuoi_trung and tuoi_bac >= tuoi_nam:
     if tuoi_trung >= tuoi_nam:
         print("Thu tu tuoi giam dan:", "Bac Trung Nam")
     else:
         print("Thu tu tuoi giam dan:", "Bac Nam Trung")
-elif tuoi_trung >= tuoi_bac and tuoi_trung >= tuoi_nam:
-    if tuoi_bac >= tuoi_nam:
-        print("Thu tu tuoi giam dan:", "Trung Bac Nam")
+else:
+    if tuoi_trung >= tuoi_bac and tuoi_trung >= tuoi_nam:
+        if tuoi_bac >= tuoi_nam:
+            print("Thu tu tuoi giam dan:", "Trung Bac Nam")
+        else:
+            print("Thu tu tuoi giam dan:", "Trung Nam Bac")
     else:
-        print("Thu tu tuoi giam dan:", "Trung Nam Bac")
-else:  # tuoi_nam lon nhat
-    if tuoi_bac >= tuoi_trung:
-        print("Thu tu tuoi giam dan:", "Nam Bac Trung")
-    else:
-        print("Thu tu tuoi giam dan:", "Nam Trung Bac")
+        if tuoi_bac >= tuoi_trung:
+            print("Thu tu tuoi giam dan:", "Nam Bac Trung")
+        else:
+            print("Thu tu tuoi giam dan:", "Nam Trung Bac")
